@@ -13,6 +13,7 @@
 		7F7294A31AF4736F00762C53 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7294A21AF4736F00762C53 /* Images.xcassets */; };
 		7F7294A61AF4736F00762C53 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7294A41AF4736F00762C53 /* LaunchScreen.xib */; };
 		7F7294B21AF4736F00762C53 /* GiphyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7294B11AF4736F00762C53 /* GiphyTests.swift */; };
+		7FA576791AF532A9007AAEA1 /* giphyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA576781AF532A9007AAEA1 /* giphyImage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		7F7294AB1AF4736F00762C53 /* GiphyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiphyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7294B01AF4736F00762C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F7294B11AF4736F00762C53 /* GiphyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyTests.swift; sourceTree = "<group>"; };
+		7FA576781AF532A9007AAEA1 /* giphyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giphyImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				7F72949A1AF4736F00762C53 /* Info.plist */,
+				7FA576781AF532A9007AAEA1 /* giphyImage.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				TargetAttributes = {
 					7F7294951AF4736F00762C53 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = SX585CK9M9;
 					};
 					7F7294AA1AF4736F00762C53 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -195,6 +199,7 @@
 				7F7294A11AF4736F00762C53 /* Main.storyboard in Resources */,
 				7F7294A61AF4736F00762C53 /* LaunchScreen.xib in Resources */,
 				7F7294A31AF4736F00762C53 /* Images.xcassets in Resources */,
+				7FA576791AF532A9007AAEA1 /* giphyImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +347,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Giphy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -352,9 +360,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Giphy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -411,6 +422,7 @@
 				7F7294B71AF4736F00762C53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F7294B81AF4736F00762C53 /* Build configuration list for PBXNativeTarget "GiphyTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +431,7 @@
 				7F7294BA1AF4736F00762C53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
