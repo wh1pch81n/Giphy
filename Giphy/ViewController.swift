@@ -31,10 +31,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
         var b = smallImage != nil && bigImage != nil
         self.navigationItem.rightBarButtonItem?.enabled = b
         
+        self.searchBar.userInteractionEnabled = b
         UIView.animateWithDuration(0.5 as NSTimeInterval, animations: { () -> Void in
-            self.searchBar.alpha = CGFloat(b)
-        }, completion: { (b) -> Void in
-            self.searchBar.userInteractionEnabled = b
+            self.searchBar.alpha =  b ? CGFloat(1.0) : CGFloat(0.2)
         })
     }
     
@@ -47,6 +46,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         self.bigImageView.layer.borderWidth = 1
         
         self.searchBar.delegate = self
+        self.searchBar.text = "cats"
         self.getImage()
         
     }
