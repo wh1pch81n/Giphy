@@ -14,21 +14,21 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var bigImageView: UIImageView!
-    var smallImage: UIImage? {
+    var smallGifData: NSData? {
         didSet {
-            self.imageView.image = smallImage
+            (self.imageView as! FLAnimatedImageView).animatedImage = FLAnimatedImage(animatedGIFData: smallGifData)
             showReload()
         }
     }
-    var bigImage: UIImage? {
+    var bigGifData: NSData? {
         didSet {
-            self.bigImageView.image = bigImage
+            (self.bigImageView as! FLAnimatedImageView).animatedImage = FLAnimatedImage(animatedGIFData: bigGifData)
             showReload()
         }
     }
     
     func showReload() {
-        var b = smallImage != nil && bigImage != nil
+        var b = smallGifData != nil && bigGifData != nil
         self.navigationItem.rightBarButtonItem?.enabled = b
         
         self.searchBar.hidden = !b
@@ -65,8 +65,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
             query = "&tag=\(query)"
         }
         let combinedUrl = NSURL(string: baseURL + query + "&rating=pg-13")!
-        bigImage = nil
-        smallImage = nil
+        bigGifData = nil
+        smallGifData = nil
         showReload()
         var loaderSmall = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         imageView.addSubview(loaderSmall)
@@ -81,25 +81,22 @@ class ViewController: UIViewController, UISearchBarDelegate {
                         let prefixSmall = "fixed_height_small_"
                         if let stillURLPath = data[prefixSmall + "still_url"] as? String,
                             stillURL = NSURL(string: stillURLPath),
-                            stillData = NSData(contentsOfURL: stillURL),
-                            stillImage = UIImage(data: stillData) {
+                            stillData = NSData(contentsOfURL: stillURL) {
                                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                    self.smallImage = stillImage
+                                    self.smallGifData = stillData
                                     loaderSmall.stopAnimating()
                                     loaderSmall.removeFromSuperview()
                                 })
                         }
-                        
                     })
                     
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), { () -> Void in
                         let prefixSmall = "image_original_"//"fixed_height_downsampled_"
                         if let downURLPath = data[prefixSmall + "url"] as? String,
                             downURL = NSURL(string: downURLPath),
-                            downData = NSData(contentsOfURL: downURL),
-                            downImage = UIImage(data: downData) {
+                            downData = NSData(contentsOfURL: downURL) {
                                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                    self.bigImage = downImage
+                                    self.bigGifData = downData
                                     loaderBig.stopAnimating()
                                     loaderBig.removeFromSuperview()
                                 })
