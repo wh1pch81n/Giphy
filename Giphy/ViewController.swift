@@ -31,7 +31,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
         var b = smallImage != nil && bigImage != nil
         self.navigationItem.rightBarButtonItem?.enabled = b
         
-        self.searchBar.userInteractionEnabled = b
+        self.searchBar.hidden = !b
+        //self.searchBar.userInteractionEnabled = b
         UIView.animateWithDuration(0.5 as NSTimeInterval, animations: { () -> Void in
             self.searchBar.alpha =  b ? CGFloat(1.0) : CGFloat(0.2)
         })
