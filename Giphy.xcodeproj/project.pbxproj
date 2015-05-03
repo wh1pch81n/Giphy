@@ -166,7 +166,8 @@
 				7F7294921AF4736F00762C53 /* Sources */,
 				7F7294931AF4736F00762C53 /* Frameworks */,
 				7F7294941AF4736F00762C53 /* Resources */,
-				7FA5767A1AF53965007AAEA1 /* ShellScript */,
+				7FA5767A1AF53965007AAEA1 /* Run Fabric Script */,
+				7F5526141AF6A3FE00FFFDA3 /* Run Build Increment Script */,
 			);
 			buildRules = (
 			);
@@ -255,13 +256,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7FA5767A1AF53965007AAEA1 /* ShellScript */ = {
+		7F5526141AF6A3FE00FFFDA3 /* Run Build Increment Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Build Increment Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Set the build number to the count of Git commits\nbuildNumber=$(git rev-list HEAD | wc -l | tr -d ' ')\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+		7FA5767A1AF53965007AAEA1 /* Run Fabric Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Fabric Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
