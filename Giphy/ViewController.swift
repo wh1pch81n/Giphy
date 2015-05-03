@@ -13,6 +13,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var refreshButton: UIBarButtonItem!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var bigImageView: UIImageView!
+    
+    var searchCount: UInt = 0
+    
     var smallGifData: NSData? {
         didSet {
             (self.bigImageView as! FLAnimatedImageView).animatedImage = FLAnimatedImage(animatedGIFData: smallGifData)
@@ -30,7 +33,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
         var b = smallGifData != nil && bigGifData != nil
         self.navigationItem.rightBarButtonItem?.enabled = b
         
-        self.searchBar.hidden = !b
         UIView.animateWithDuration(0.5 as NSTimeInterval, animations: { () -> Void in
             self.searchBar.alpha =  b ? CGFloat(1.0) : CGFloat(0.2)
         })
@@ -43,14 +45,13 @@ class ViewController: UIViewController, UISearchBarDelegate {
         self.bigImageView.layer.borderWidth = 1
         
         self.searchBar.delegate = self
-        self.searchBar.text = "cats"
+        self.searchBar.text = "Picard"
         self.getImage()
         
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         self.getImage()
-       
     }
     
     @IBAction func getImage() {
@@ -68,35 +69,47 @@ class ViewController: UIViewController, UISearchBarDelegate {
         var loaderBig = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         bigImageView.addSubview(loaderBig)
         loaderBig.startAnimating()
-        NSURLSession.sharedSession().dataTaskWithURL(combinedUrl, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
-            if let d =  NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? [String : AnyObject] {
-                if let data = d["data"] as? [String : AnyObject] {
-                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), { () -> Void in
-                        let prefixSmall = "fixed_height_small_"
-                        if let stillURLPath = data[prefixSmall + "still_url"] as? String,
-                            stillURL = NSURL(string: stillURLPath),
-                            stillData = NSData(contentsOfURL: stillURL) {
-                                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                    self.smallGifData = stillData
-                                })
-                        }
-                        let prefixBig = "image_original_"
-                        if let downURLPath = data[prefixBig + "url"] as? String,
-                            downURL = NSURL(string: downURLPath),
-                            downData = NSData(contentsOfURL: downURL) {
-                                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                    self.bigGifData = downData
-                                    loaderBig.stopAnimating()
-                                    loaderBig.removeFromSuperview()
-                                })
-                        }
+        
+        self.searchCount = self.searchCount &+ 1
+        let _ =
+        { (lastSearch: UInt) -> Void in
+            NSURLSession.sharedSession().dataTaskWithURL(combinedUrl, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+                if let d =  NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? [String : AnyObject] {
+                    if let data = d["data"] as? [String : AnyObject] {
+                        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), { () -> Void in
+                            let prefixSmall = "fixed_height_small_"
+                            if let stillURLPath = data[prefixSmall + "still_url"] as? String,
+                                stillURL = NSURL(string: stillURLPath),
+                                stillData = NSData(contentsOfURL: stillURL) {
+                                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                        if self.searchCount == lastSearch {
+                                            self.smallGifData = stillData
+                                        }
+                                    })
+                            }
+                            let prefixBig = "image_original_"
+                            if let downURLPath = data[prefixBig + "url"] as? String,
+                                downURL = NSURL(string: downURLPath),
+                                downData = NSData(contentsOfURL: downURL) {
+                                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                        if self.searchCount == lastSearch {
+                                            self.bigGifData = downData
+                                            
+                                        }
+                                        loaderBig.stopAnimating()
+                                        loaderBig.removeFromSuperview()
+                                    })
+                            }
+                            
+                        })
                         
-                    })
-                    
+                    }
                 }
-            }
-        }).resume()
+            }).resume()
+            } (self.searchCount)
+        
+        
     }
-
+    
 }
 
