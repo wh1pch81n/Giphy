@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pKN-bt-RfF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,33 +13,26 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholder="Search Random Stuff" translatesAutoresizingMaskIntoConstraints="NO" id="5Lw-Yj-J9o">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="245" verticalHuggingPriority="245" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="qcd-Wf-8Wa" customClass="FLAnimatedImageView">
-                                <rect key="frame" x="0.0" y="44" width="320" height="153"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="300" translatesAutoresizingMaskIntoConstraints="NO" id="868-bf-cEP" customClass="FLAnimatedImageView">
-                                <rect key="frame" x="0.0" y="197" width="320" height="307"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="460"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="868-bf-cEP" secondAttribute="trailing" id="24v-kl-J5b"/>
                             <constraint firstItem="868-bf-cEP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2lT-Gf-F9g"/>
-                            <constraint firstItem="868-bf-cEP" firstAttribute="top" secondItem="qcd-Wf-8Wa" secondAttribute="bottom" id="9Sp-Te-gQz"/>
                             <constraint firstItem="5Lw-Yj-J9o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HoF-rc-oqG"/>
-                            <constraint firstItem="qcd-Wf-8Wa" firstAttribute="height" secondItem="868-bf-cEP" secondAttribute="height" multiplier="1:2" id="U6L-R7-zo2"/>
+                            <constraint firstItem="868-bf-cEP" firstAttribute="top" secondItem="5Lw-Yj-J9o" secondAttribute="bottom" id="Lit-yY-inT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="868-bf-cEP" secondAttribute="bottom" id="VgP-O9-Vuk"/>
                             <constraint firstAttribute="trailing" secondItem="5Lw-Yj-J9o" secondAttribute="trailing" id="WfI-yy-52e"/>
-                            <constraint firstAttribute="trailing" secondItem="qcd-Wf-8Wa" secondAttribute="trailing" id="mNQ-8g-PM5"/>
                             <constraint firstItem="5Lw-Yj-J9o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pwO-80-5Jd"/>
-                            <constraint firstItem="qcd-Wf-8Wa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tV9-Oq-Kvh"/>
-                            <constraint firstItem="qcd-Wf-8Wa" firstAttribute="top" secondItem="5Lw-Yj-J9o" secondAttribute="bottom" id="trU-Nc-jbu"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -54,7 +46,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bigImageView" destination="868-bf-cEP" id="MAQ-k2-57d"/>
-                        <outlet property="imageView" destination="qcd-Wf-8Wa" id="OoF-34-RML"/>
                         <outlet property="refreshButton" destination="9SX-5D-UZI" id="hpG-zP-cRY"/>
                         <outlet property="searchBar" destination="5Lw-Yj-J9o" id="rH0-iN-lvf"/>
                         <outlet property="searchDisplayController" destination="VM7-og-9WA" id="atQ-wU-evK"/>
