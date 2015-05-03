@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F55260F1AF6954E00FFFDA3 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F55260C1AF6954E00FFFDA3 /* FLAnimatedImage.m */; };
 		7F5526101AF6954E00FFFDA3 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F55260E1AF6954E00FFFDA3 /* FLAnimatedImageView.m */; };
+		7F5526131AF6A0DA00FFFDA3 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5526121AF6A0DA00FFFDA3 /* iAd.framework */; };
 		7F72949C1AF4736F00762C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F72949B1AF4736F00762C53 /* AppDelegate.swift */; };
 		7F72949E1AF4736F00762C53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F72949D1AF4736F00762C53 /* ViewController.swift */; };
 		7F7294A11AF4736F00762C53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F72949F1AF4736F00762C53 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		7F55260C1AF6954E00FFFDA3 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
 		7F55260D1AF6954E00FFFDA3 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
 		7F55260E1AF6954E00FFFDA3 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		7F5526121AF6A0DA00FFFDA3 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		7F7294961AF4736F00762C53 /* Giphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F72949A1AF4736F00762C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F72949B1AF4736F00762C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F5526131AF6A0DA00FFFDA3 /* iAd.framework in Frameworks */,
 				7FA5767E1AF539A9007AAEA1 /* Crashlytics.framework in Frameworks */,
 				7FA5767D1AF539A9007AAEA1 /* Fabric.framework in Frameworks */,
 			);
@@ -86,6 +89,7 @@
 		7F5526111AF6956200FFFDA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7F5526121AF6A0DA00FFFDA3 /* iAd.framework */,
 				7F55260A1AF6954E00FFFDA3 /* FLAnimatedImage */,
 				7FA5767B1AF539A9007AAEA1 /* Fabric.framework */,
 				7FA5767C1AF539A9007AAEA1 /* Crashlytics.framework */,

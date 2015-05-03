@@ -31,8 +31,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     func showReload() {
         var b = smallGifData != nil && bigGifData != nil
-        self.navigationItem.rightBarButtonItem?.enabled = b
-        
         UIView.animateWithDuration(0.5 as NSTimeInterval, animations: { () -> Void in
             self.searchBar.alpha =  b ? CGFloat(1.0) : CGFloat(0.2)
         })
@@ -40,14 +38,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.bigImageView.layer.borderColor = UIColor.redColor().CGColor
-        self.bigImageView.layer.borderWidth = 1
-        
-        self.searchBar.delegate = self
-        self.searchBar.text = "Picard"
         self.getImage()
-        
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
