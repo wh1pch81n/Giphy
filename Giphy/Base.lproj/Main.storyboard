@@ -41,7 +41,7 @@
                                     <rect key="frame" x="0.0" y="686" width="400" height="50"/>
                                 </variation>
                             </adBannerView>
-                            <searchBar contentMode="redraw" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Pocky" placeholder="Search Gif's" translatesAutoresizingMaskIntoConstraints="NO" id="7u6-lv-bCa">
+                            <searchBar contentMode="redraw" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Cat" placeholder="Search Gif's" translatesAutoresizingMaskIntoConstraints="NO" id="7u6-lv-bCa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
