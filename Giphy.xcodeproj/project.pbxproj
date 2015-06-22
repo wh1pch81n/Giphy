@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F55260F1AF6954E00FFFDA3 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F55260C1AF6954E00FFFDA3 /* FLAnimatedImage.m */; };
+		7F5526101AF6954E00FFFDA3 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F55260E1AF6954E00FFFDA3 /* FLAnimatedImageView.m */; };
+		7F5526131AF6A0DA00FFFDA3 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5526121AF6A0DA00FFFDA3 /* iAd.framework */; };
 		7F72949C1AF4736F00762C53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F72949B1AF4736F00762C53 /* AppDelegate.swift */; };
 		7F72949E1AF4736F00762C53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F72949D1AF4736F00762C53 /* ViewController.swift */; };
 		7F7294A11AF4736F00762C53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F72949F1AF4736F00762C53 /* Main.storyboard */; };
 		7F7294A31AF4736F00762C53 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7294A21AF4736F00762C53 /* Images.xcassets */; };
 		7F7294A61AF4736F00762C53 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7294A41AF4736F00762C53 /* LaunchScreen.xib */; };
 		7F7294B21AF4736F00762C53 /* GiphyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7294B11AF4736F00762C53 /* GiphyTests.swift */; };
+		7FA576791AF532A9007AAEA1 /* giphyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA576781AF532A9007AAEA1 /* giphyImage.png */; };
+		7FA5767D1AF539A9007AAEA1 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA5767B1AF539A9007AAEA1 /* Fabric.framework */; };
+		7FA5767E1AF539A9007AAEA1 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA5767C1AF539A9007AAEA1 /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F55260B1AF6954E00FFFDA3 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		7F55260C1AF6954E00FFFDA3 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		7F55260D1AF6954E00FFFDA3 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		7F55260E1AF6954E00FFFDA3 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		7F5526121AF6A0DA00FFFDA3 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		7F7294961AF4736F00762C53 /* Giphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F72949A1AF4736F00762C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F72949B1AF4736F00762C53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +47,10 @@
 		7F7294AB1AF4736F00762C53 /* GiphyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiphyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7294B01AF4736F00762C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F7294B11AF4736F00762C53 /* GiphyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyTests.swift; sourceTree = "<group>"; };
+		7FA576781AF532A9007AAEA1 /* giphyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giphyImage.png; sourceTree = "<group>"; };
+		7FA5767B1AF539A9007AAEA1 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		7FA5767C1AF539A9007AAEA1 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		7FECC2341AF6875600E6AABC /* FLAnimation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FLAnimation-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F5526131AF6A0DA00FFFDA3 /* iAd.framework in Frameworks */,
+				7FA5767E1AF539A9007AAEA1 /* Crashlytics.framework in Frameworks */,
+				7FA5767D1AF539A9007AAEA1 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +74,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F55260A1AF6954E00FFFDA3 /* FLAnimatedImage */ = {
+			isa = PBXGroup;
+			children = (
+				7F55260B1AF6954E00FFFDA3 /* FLAnimatedImage.h */,
+				7F55260C1AF6954E00FFFDA3 /* FLAnimatedImage.m */,
+				7F55260D1AF6954E00FFFDA3 /* FLAnimatedImageView.h */,
+				7F55260E1AF6954E00FFFDA3 /* FLAnimatedImageView.m */,
+			);
+			name = FLAnimatedImage;
+			path = ../FLAnimatedImage/FLAnimatedImageDemo/FLAnimatedImage;
+			sourceTree = "<group>";
+		};
+		7F5526111AF6956200FFFDA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F5526121AF6A0DA00FFFDA3 /* iAd.framework */,
+				7F55260A1AF6954E00FFFDA3 /* FLAnimatedImage */,
+				7FA5767B1AF539A9007AAEA1 /* Fabric.framework */,
+				7FA5767C1AF539A9007AAEA1 /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7F72948D1AF4736F00762C53 = {
 			isa = PBXGroup;
 			children = (
+				7F5526111AF6956200FFFDA3 /* Frameworks */,
 				7F7294981AF4736F00762C53 /* Giphy */,
 				7F7294AE1AF4736F00762C53 /* GiphyTests */,
 				7F7294971AF4736F00762C53 /* Products */,
@@ -91,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				7F72949A1AF4736F00762C53 /* Info.plist */,
+				7FA576781AF532A9007AAEA1 /* giphyImage.png */,
+				7FECC2341AF6875600E6AABC /* FLAnimation-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -122,6 +166,8 @@
 				7F7294921AF4736F00762C53 /* Sources */,
 				7F7294931AF4736F00762C53 /* Frameworks */,
 				7F7294941AF4736F00762C53 /* Resources */,
+				7FA5767A1AF53965007AAEA1 /* Run Fabric Script */,
+				7F5526141AF6A3FE00FFFDA3 /* Run Build Increment Script */,
 			);
 			buildRules = (
 			);
@@ -161,6 +207,7 @@
 				TargetAttributes = {
 					7F7294951AF4736F00762C53 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = SX585CK9M9;
 					};
 					7F7294AA1AF4736F00762C53 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -195,6 +242,7 @@
 				7F7294A11AF4736F00762C53 /* Main.storyboard in Resources */,
 				7F7294A61AF4736F00762C53 /* LaunchScreen.xib in Resources */,
 				7F7294A31AF4736F00762C53 /* Images.xcassets in Resources */,
+				7FA576791AF532A9007AAEA1 /* giphyImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +255,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7F5526141AF6A3FE00FFFDA3 /* Run Build Increment Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Build Increment Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Set the build number to the count of Git commits\nbuildNumber=$(git rev-list HEAD | wc -l | tr -d ' ')\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+		7FA5767A1AF53965007AAEA1 /* Run Fabric Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Fabric Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run a19371d312f609617a3ca3ca8611a1e3b08aa16c ff14fc4996dab8a9c0416b2022a25161796e35b294f2aff5cf53898a444d708d";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7F7294921AF4736F00762C53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -214,6 +293,8 @@
 			files = (
 				7F72949E1AF4736F00762C53 /* ViewController.swift in Sources */,
 				7F72949C1AF4736F00762C53 /* AppDelegate.swift in Sources */,
+				7F55260F1AF6954E00FFFDA3 /* FLAnimatedImage.m in Sources */,
+				7F5526101AF6954E00FFFDA3 /* FLAnimatedImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +423,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = Giphy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Giphy/FLAnimation-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -352,9 +446,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = Giphy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Giphy/FLAnimation-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -411,6 +518,7 @@
 				7F7294B71AF4736F00762C53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F7294B81AF4736F00762C53 /* Build configuration list for PBXNativeTarget "GiphyTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +527,7 @@
 				7F7294BA1AF4736F00762C53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

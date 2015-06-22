@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pKN-bt-RfF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pKN-bt-RfF">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,34 +13,84 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholder="Search Random Stuff" translatesAutoresizingMaskIntoConstraints="NO" id="5Lw-Yj-J9o">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="300" translatesAutoresizingMaskIntoConstraints="NO" id="868-bf-cEP" customClass="FLAnimatedImageView">
+                                <rect key="frame" x="0.0" y="186" width="600" height="300"/>
+                            </imageView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fKQ-Rp-nFu">
+                                <rect key="frame" x="0.0" y="486" width="600" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lHB-Bo-nyF"/>
+                                    <constraint firstAttribute="height" constant="32" id="qnt-3h-fU9"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qnt-3h-fU9"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="304" width="600" height="32"/>
+                                    <mask key="constraints">
+                                        <exclude reference="lHB-Bo-nyF"/>
+                                        <include reference="qnt-3h-fU9"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="686" width="400" height="50"/>
+                                </variation>
+                            </adBannerView>
+                            <searchBar contentMode="redraw" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Cat" placeholder="Search Gif's" translatesAutoresizingMaskIntoConstraints="NO" id="7u6-lv-bCa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qzB-mr-4CB"/>
+                                </connections>
                             </searchBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="245" verticalHuggingPriority="245" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="qcd-Wf-8Wa">
-                                <rect key="frame" x="0.0" y="44" width="320" height="153"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="300" translatesAutoresizingMaskIntoConstraints="NO" id="868-bf-cEP">
-                                <rect key="frame" x="0.0" y="197" width="320" height="307"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7u6-lv-bCa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0Yl-yt-nQA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fKQ-Rp-nFu" secondAttribute="bottom" id="1i5-AL-6AB"/>
                             <constraint firstAttribute="trailing" secondItem="868-bf-cEP" secondAttribute="trailing" id="24v-kl-J5b"/>
                             <constraint firstItem="868-bf-cEP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2lT-Gf-F9g"/>
-                            <constraint firstItem="868-bf-cEP" firstAttribute="top" secondItem="qcd-Wf-8Wa" secondAttribute="bottom" id="9Sp-Te-gQz"/>
-                            <constraint firstItem="5Lw-Yj-J9o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HoF-rc-oqG"/>
-                            <constraint firstItem="qcd-Wf-8Wa" firstAttribute="height" secondItem="868-bf-cEP" secondAttribute="height" multiplier="1:2" id="U6L-R7-zo2"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="868-bf-cEP" secondAttribute="bottom" id="VgP-O9-Vuk"/>
-                            <constraint firstAttribute="trailing" secondItem="5Lw-Yj-J9o" secondAttribute="trailing" id="WfI-yy-52e"/>
-                            <constraint firstAttribute="trailing" secondItem="qcd-Wf-8Wa" secondAttribute="trailing" id="mNQ-8g-PM5"/>
-                            <constraint firstItem="5Lw-Yj-J9o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pwO-80-5Jd"/>
-                            <constraint firstItem="qcd-Wf-8Wa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tV9-Oq-Kvh"/>
-                            <constraint firstItem="qcd-Wf-8Wa" firstAttribute="top" secondItem="5Lw-Yj-J9o" secondAttribute="bottom" id="trU-Nc-jbu"/>
+                            <constraint firstItem="fKQ-Rp-nFu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DJJ-Gp-oCM"/>
+                            <constraint firstItem="fKQ-Rp-nFu" firstAttribute="top" secondItem="868-bf-cEP" secondAttribute="bottom" id="XgZ-OD-6xm"/>
+                            <constraint firstAttribute="trailing" secondItem="7u6-lv-bCa" secondAttribute="trailing" id="b3h-Bn-eOv"/>
+                            <constraint firstItem="7u6-lv-bCa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eAR-x1-jVW"/>
+                            <constraint firstAttribute="trailing" secondItem="fKQ-Rp-nFu" secondAttribute="trailing" id="n6m-Zb-hYw"/>
+                            <constraint firstItem="868-bf-cEP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nAS-nJ-8Do"/>
+                            <constraint firstItem="868-bf-cEP" firstAttribute="top" secondItem="7u6-lv-bCa" secondAttribute="bottom" id="qXt-jg-9he"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7u6-lv-bCa"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0Yl-yt-nQA"/>
+                                <exclude reference="b3h-Bn-eOv"/>
+                                <exclude reference="eAR-x1-jVW"/>
+                                <exclude reference="nAS-nJ-8Do"/>
+                                <exclude reference="qXt-jg-9he"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="nAS-nJ-8Do"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7u6-lv-bCa"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0Yl-yt-nQA"/>
+                                <include reference="b3h-Bn-eOv"/>
+                                <include reference="eAR-x1-jVW"/>
+                                <include reference="qXt-jg-9he"/>
+                            </mask>
+                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
@@ -54,9 +103,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bigImageView" destination="868-bf-cEP" id="MAQ-k2-57d"/>
-                        <outlet property="imageView" destination="qcd-Wf-8Wa" id="OoF-34-RML"/>
                         <outlet property="refreshButton" destination="9SX-5D-UZI" id="hpG-zP-cRY"/>
-                        <outlet property="searchBar" destination="5Lw-Yj-J9o" id="rH0-iN-lvf"/>
+                        <outlet property="searchBar" destination="7u6-lv-bCa" id="7uM-yv-2zp"/>
                         <outlet property="searchDisplayController" destination="VM7-og-9WA" id="atQ-wU-evK"/>
                     </connections>
                 </viewController>
@@ -70,7 +118,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="662" y="319"/>
+            <point key="canvasLocation" x="1240.5" y="336.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DY0-dh-sXC">
@@ -91,12 +139,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3X-GN-tS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="319"/>
+            <point key="canvasLocation" x="243.75" y="336.97183098591546"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
